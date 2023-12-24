@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker App</title>
+    <link rel="icon" href="./image/bookmark.png">
+    <link rel="stylesheet" href="./icons (fontawsome)/css/all.min.css.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="position-relative">
+        <div class="container py-5 d-flex justify-content-center align-item-center text-lowercase ">
+            <h1 class="fw-lighter ">Bookmarker</h1>
+        </div>
+
+        <div class="  line mt-3 py-4 d-flex flex-column justify-content-center align-items-center">
+            <h2>
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+        </div>
+
+        <div class="site container w-100 d-flex flex-column justify-content-center ">
+
+            <label for="siteName" class="fw-semibold py-2">
+                <i class="fa-solid fa-book-bookmark pe-1"></i>
+                Site Name</label>
+            <input type="text" class="form-control" id="siteName" placeholder="Bookmark Name">
+        </div>
+
+        <div class="site container w-100 d-flex flex-column justify-content-center ">
+            <label for="siteUrl" class="fw-semibold py-2 mt-3">
+                <i class="fa-solid fa-link pe-1"></i>
+                Site URL</label>
+            <input type="url" class="form-control" id="siteUrl" placeholder="Website URL">
+        </div>
+
+        <button onclick="addBookmark()"
+            class="btn btn-danger m-auto d-flex justify-content-center px-5 mt-4 ">Submit</button>
+        <!-- <input type="text" oninput="searchName(this.value)" class="form-control w-25 my-3 mx-auto" placeholder="Search by name ....."> -->
+        <div class="line mt-4">
+            <table class="table mt-3 text-center">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+
+                <tbody id="tBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="box"
+        class=" alert box-info position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+        <div class=" box-content bg-white p-4 rounded-2 shadow-lg">
+            <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                <div class="dots m-4">
+                    <i class="fa-solid fa-circle fs-5 dot1"></i>
+                    <i class="fa-solid fa-circle fs-5 dot2"></i>
+                    <i class="fa-solid fa-circle fs-5 dot3"></i>
+                </div>
+                <button class="btn border-0" id="closeBtn">
+                    <i class=" alert fa-solid fa-xmark close fs-3">
+                    </i>
+                </button>
+            </header>
+
+            <p class="m-0 pb-2 fw-bolder">site Name or url is not valid, please follow the rules below : </p>
+            <ol class="rules list-unstyled m-0">
+                <li>
+
+                    <i class="fa-regular fa-circle-right p-2">
+                    </i>
+                    site name must contain at least 3 characters
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-right p-2">
+                    </i>
+                    site URL must be a valid one
+                </li>
+            </ol>
+        </div>
+    </div>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
